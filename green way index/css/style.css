@@ -1,3 +1,10 @@
+
+:root {
+    --color-primary: #7a7a16;
+    --color-secondary: #3c2915;
+    --color-bg: #6FC878;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -5,62 +12,249 @@
 }
 
 body {
-    font-family: sans-serif;
+    font-family: "Signika", sans-serif;
 }
 
-.header {
+hr {
+    margin-top: 50px;    
+    border-width: 0; 
+    height: 10px;
     width: 100%;
-    background: url(../img/cover.png) no-repeat;
-    background-size: 100%;
+    background: url(../img/linha.svg) center no-repeat;   
 }
 
-.header img {
-    width: 350px;
-    padding-left: 100px;
+
+
+
+
+/********** HOME **********/
+
+
+
+
+
+.home {
+    background-image: url(../img/bg-home.png);
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+    background-attachment: fixed;
 }
 
-.container {
+.home .header {
+    padding: 30px 0;
+}
+
+.home .header .nav {
     display: flex;
+    justify-content: center;
 }
 
-.nav-bar {
-    width: 30%;
-    padding: 30px;
-    
-}
-
-.nav-bar li {
+.home .header .nav ul {
+    display: flex;
     list-style: none;
 }
 
-.nav-bar li a {
-    display: block;
-    background: #7a3c09;
-    padding: 15px 20px;
-    margin: 10px 0;
-    border-radius: 20px 0;
+.home .header .nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+}
+
+.home .header .nav li a {
+    padding: 20px;
+    color: var(--color-primary);
+    font-size: 16px;
     text-decoration: none;
-    color: #fff;
-    font-weight: bold;
 }
 
-.content {
-    width: 70%;
-    padding: 10px 10px 0 10px;
+.home .header .nav li a:hover {
+    color: var(--color-secondary);
+    border-bottom: 2px solid var(--color-secondary);
 }
 
-.content h2 {
-    font-size: 24px;
+.home .header .nav ul li .logo {
+    width: 80px;
+    height: 80px;
 }
 
-.content h2 span {
-    color: green;
-    font-size: 36px;
+
+
+
+
+/********** HOME - BANNER **********/
+
+
+
+
+
+.banner {
+    width: 960px;
+    margin: 0 auto;
 }
 
-.footer {
-    background: #000;
-    color: #fff;
+.banner h1 {
+    color: var(--color-primary);
+    font-size: 70px;
+    margin: 65px 130px 0 130px;
+}
+
+.banner span {
+    color: var(--color-secondary);
+    font-size: 18px;
+    margin-left: 135px;
+}
+
+
+
+
+
+/********** THE TEAM **********/
+
+
+
+
+
+.our-team {
+    background-color: var(--color-bg);
+}
+
+.our-team .info-people {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.our-team .info-people h2 {
     text-align: center;
-    padding: 20px 0;
+    padding-top: 80px;
+    font-size: 50px;
+    color: var(--color-primary);
+}
+
+.our-team .info-people .about-text {
+    width: 960px;
+    margin: 0 auto;
+} 
+
+.our-team .about-text p {
+    padding: 30px 35px 80px 35px;
+    text-align: center;
+}
+
+.our-team .info-people .person {
+    display: flex;
+}
+
+.our-team .info-people .person:nth-child(4) {
+    flex-direction: row-reverse;
+    margin-top: -30px;
+}
+
+.our-team .info-people .person:last-child {
+    padding-bottom: 40px;
+    margin-top: -30px;
+}
+
+.our-team .info-people .person img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 3px solid var(--color-primary);
+}
+
+.our-team .info-people .person p {
+    margin: 55px 40px;
+}
+
+
+
+
+/********** MENU **********/
+
+
+
+
+.menu {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.menu h2 {
+    margin-top: 80px;
+    font-size: 50px;
+    text-align: center;
+    color: var(--color-primary);
+}
+
+.menu p {
+    font-size: 17px;
+    text-align: center;
+    margin: 10px 0 20px 0;
+}
+
+.menu .dishes {
+    width: 73%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border: 5px solid var(--color-secondary);
+    border-radius: 20px 70px;
+}
+
+.menu .dishes h4 {
+    font-size: 25px;
+    font-weight: 400;
+    color: var(--color-primary);
+}
+
+.menu .dishes .wow {
+    color: var(--color-primary);
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.menu .dishes .gf {
+    font-style: italic;
+}
+
+
+
+
+/********** CONGRATS **********/
+
+
+
+
+
+.congrats {
+    margin: 30px 0 0 0;
+    background-color: var(--color-bg);
+}
+
+.congrats .info {
+    width: 960px;
+    margin: 0px auto;
+    padding: 80px 0 50px 0;
+}
+
+.congrats .info .text {
+    margin: 0 50px;
+}
+
+.congrats .info .text h2 {
+    font-size: 50px;
+    color: var(--color-primary);
+    text-align: center;
+}
+
+.congrats .info .text p {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 30px;
+}
+
+.congrats .info .text span {
+    color: var(--color-primary);
+    font-weight: bold;
 }
